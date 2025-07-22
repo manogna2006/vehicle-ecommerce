@@ -1,0 +1,99 @@
+.sell-form {
+  max-width: 600px;
+  margin: 40px auto;
+  background: #fefefe;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+  animation: fadeIn 0.5s ease;
+}
+
+.sell-form h2 {
+  text-align: center;
+  color: #333;
+  margin-bottom: 25px;
+}
+
+.sell-form input,
+.sell-form select,
+.sell-form textarea {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 16px;
+}
+
+.sell-form button {
+  width: 100%;
+  padding: 12px;
+  background: #4caf50;
+  color: white;
+  font-size: 18px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.sell-form button:hover {
+  background: #388e3c;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* ✅ Responsive Styles */
+@media (max-width: 768px) {
+  .sell-form {
+    padding: 20px;
+    border-radius: 10px;
+    margin: 30px 15px;
+  }
+
+  .sell-form h2 {
+    font-size: 24px;
+  }
+
+  .sell-form input,
+  .sell-form select,
+  .sell-form textarea {
+    font-size: 15px;
+    padding: 8px;
+  }
+
+  .sell-form button {
+    font-size: 16px;
+    padding: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .sell-form {
+    padding: 15px;
+    margin: 20px 10px;
+  }
+
+  .sell-form h2 {
+    font-size: 20px;
+  }
+
+  .sell-form input,
+  .sell-form select,
+  .sell-form textarea {
+    font-size: 14px;
+  }
+
+  .sell-form button {
+    font-size: 15px;
+  }
+}

@@ -1,0 +1,64 @@
+/* src/pages/About.css */
+.about-container {
+  background: linear-gradient(to right, #f9f9f9, #f1f4f8);
+  min-height: 100vh;
+  padding: 50px 20px;
+  font-family: "Segoe UI", sans-serif;
+  color: #333;
+}
+
+.about-content {
+  max-width: 900px;
+  margin: auto;
+  background-color: white;
+  padding: 40px;
+  border-radius: 16px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.about-content h1 {
+  color: #2c3e50;
+  font-size: 36px;
+  margin-bottom: 20px;
+}
+
+.about-content p {
+  font-size: 18px;
+  line-height: 1.8;
+  margin-bottom: 20px;
+}
+
+/* ✅ Responsive Styles */
+@media (max-width: 768px) {
+  .about-content {
+    padding: 20px;
+    border-radius: 10px;
+  }
+
+  .about-content h1 {
+    font-size: 28px;
+  }
+
+  .about-content p {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .about-container {
+    padding: 30px 10px;
+  }
+
+  .about-content {
+    padding: 15px;
+  }
+
+  .about-content h1 {
+    font-size: 24px;
+  }
+
+  .about-content p {
+    font-size: 15px;
+    line-height: 1.6;
+  }
+}

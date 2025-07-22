@@ -1,0 +1,96 @@
+/* src/pages/Auth.css */
+
+.auth-container {
+  max-width: 420px;
+  margin: 100px auto;
+  padding: 30px;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+}
+
+.auth-container h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #2c3e50;
+}
+
+.auth-container form {
+  display: flex;
+  flex-direction: column;
+}
+
+.auth-container input,
+.auth-container select {
+  padding: 12px;
+  margin-bottom: 16px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 16px;
+}
+
+.auth-container button {
+  padding: 12px;
+  background: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.auth-container button:hover {
+  background: #3e8e41;
+}
+
+.auth-container p {
+  text-align: center;
+  color: #d32f2f;
+  margin-top: 10px;
+}
+
+/* ✅ Responsive Design */
+@media (max-width: 768px) {
+  .auth-container {
+    padding: 25px 20px;
+    margin: 60px 15px;
+  }
+
+  .auth-container h2 {
+    font-size: 24px;
+  }
+
+  .auth-container input,
+  .auth-container select {
+    font-size: 15px;
+    padding: 10px;
+  }
+
+  .auth-container button {
+    font-size: 15px;
+    padding: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .auth-container {
+    padding: 20px 15px;
+    margin: 40px 10px;
+  }
+
+  .auth-container h2 {
+    font-size: 20px;
+  }
+
+  .auth-container input,
+  .auth-container select {
+    font-size: 14px;
+    padding: 8px;
+  }
+
+  .auth-container button {
+    font-size: 14px;
+    padding: 9px;
+  }
+}
