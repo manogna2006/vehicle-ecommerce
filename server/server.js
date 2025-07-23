@@ -6,6 +6,9 @@ const path = require("path");
 
 const authRoutes = require("./routes/auth");
 const vehicleRoutes = require("./routes/vehicles");
+const cookieParser = require("cookie-parser");
+app.use(cookieParser()); // ✅ after express.json()
+
 
 
 dotenv.config();
@@ -13,8 +16,14 @@ console.log("MONGO_URI:", process.env.MONGO_URI);
 
 
 const app = express();
-app.use(cors());
+app.use(cors({
+  origin: "https://vehicle-frontend-6wm7.onrender.com",  // your frontend
+  credentials: true,
+  methods:["GET","POST","PUT","DELETE"],
+}));
 app.use(express.json());
+app.use(cookieParser()); 
+
 
 // Serve uploaded images
 app.use("/uploads", express.static(path.join(__dirname, "uploads")));

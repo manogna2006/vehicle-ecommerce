@@ -58,6 +58,12 @@ router.post("/register", async (req, res) => {
     res.status(500).json({ error: "Server error" });
   }
 });
+const cookieOptions = {
+  httpOnly: true,
+  secure: true,
+  sameSite: "None",  // Required for cross-site cookies
+  maxAge: 7 * 24 * 60 * 60 * 1000, // 7 days
+};
 
 // ✅ Login Route
 router.post("/login", async (req, res) => {
@@ -76,9 +82,9 @@ router.post("/login", async (req, res) => {
     const token = jwt.sign(
   { id: user._id, email: user.email  },  // ✅ include email here!
   process.env.JWT_SECRET,
-  { expiresIn: "1h" }
+  { expiresIn: "7d" }
 );
-
+res.cookie("token", token, cookieOptions);
 
     res.json({
       token,
